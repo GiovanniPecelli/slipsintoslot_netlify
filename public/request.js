@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Dati del form:", formData);  // Aggiungi questo per verificare se i dati del form sono raccolti correttamente
 
             // Invia una richiesta POST al server con i dati del modulo
-            fetch('https://slipsintoslot.vercel.app/submit-form', {
+            fetch('https://slipsintoslot.netlify.app/submit-form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
