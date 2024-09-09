@@ -1,0 +1,568 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: whitesmoke;
+    font-family: "UnifrakturMaguntia", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width: 640px) {
+    .hero h1 {
+        font-size: 37px;
+    }
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.526);
+}
+
+.hero {
+    position: relative;
+    z-index: 2; /* Assicura che il contenuto della hero sia sopra l'immagine di sfondo */
+    width: 100%;
+    height: 90svh; /* Adjusts to the dynamic viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra orizzontalmente */
+    overflow: hidden; /* Nasconde il contenuto che esce dai limiti */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hero1.jpeg'); /* Sostituisci con il tuo URL dell'immagine */
+    background-size: cover;
+    background-position: center;
+    z-index: -2; /* Mette l'immagine di sfondo dietro il contenuto */
+    background-attachment: fixed; /* Fissa l'immagine di sfondo durante lo scroll */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)); /* filtro scuro sopra l'immagine */
+    z-index: -1; /* Sotto l'immagine di sfondo */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Assicura che il contenuto sia sopra l'immagine di sfondo e il filtro */
+    text-align: center; /* Centra il testo orizzontalmente */
+    color: whitesmoke; /* Colore del testo per la leggibilità */
+}
+
+.hero-cta {
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    color: whitesmoke;
+}
+
+/* header della page */
+
+.header {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: none; /* Rimuove il background della header */
+}
+
+.logo a img {
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    max-width: 120px;
+    min-width: 120px;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    /*padding: 10px 20px; /* Aggiungi padding per spaziatura interna */
+}
+
+.menu {
+    margin-right: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Spazio tra i bottoni */
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    font-family: 'nunito';
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-text-decoration: none; /* Rimuove la sottolineatura su iOS */
+    color: whitesmoke; /* Colore del testo */
+    padding: 5px 5px;
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+}
+
+.menu a:hover {
+    background-color: rgba(55, 55, 55, 0); /* Colore di sfondo al passaggio del mouse */
+}
+
+.menu ul li a {
+    margin-right: 15px;
+    font-size: 15px;
+    justify-content: space-between;
+
+}
+@media screen and (max-width: 430px) {
+    .menu ul li a {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    .menu {
+        margin-right: 20px;
+    }
+
+    .menu ul {
+        gap: 5px;
+    }
+}
+
+/* devider image section */
+
+.cover {
+    position: relative;
+    height: 572px; /* Altezza della sezione */
+    overflow: hidden; /* Nasconde il contenuto che esce dai confini */
+    font-family: 'nunito';
+}
+
+.cover h2 {
+    font-family: 'nunito';
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.cover__carrier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/home1.JPG');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.cover__filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    z-index: -1;
+}
+
+.cover__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.cover__text {
+    max-width: 600px; /* Imposta una larghezza massima per il contenuto */
+}
+
+.cover__button {
+    text-transform: uppercase;
+    font-family: 'nunito';
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.291);
+    border: 1px solid whitesmoke; /* Riduci lo spessore del bordo */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cover__button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Stili per la sezione introduttiva */
+.intro-section {
+    background-color: rgba(245, 245, 245, 0.923); /* Sfondo chiaro per la sezione introduttiva */
+    font-family: 'nunito';
+    padding: 40px 30px; /* Spaziatura attorno al contenuto */
+    text-align: center; /* Allinea il testo al centro */
+    margin-bottom: 40px; /* Spazio sotto la sezione */
+}
+
+.intro-title {
+    font-size: 21px; /* Dimensione del font del titolo */
+    font-weight: 800;
+    margin-bottom: 40px; /* Spazio sotto il titolo */
+    color: #333; /* Colore del testo del titolo */
+}
+
+.intro-paragraph {
+    font-size: 16px; /* Dimensione del font del paragrafo */
+    font-weight: 600;
+    color: #575757; /* Colore del testo del paragrafo */
+    max-width: 800px; /* Larghezza massima del paragrafo */
+    margin: 0 auto; /* Centra il paragrafo */
+}
+
+/* Sezione delle card */
+.image-cards {
+    display: flex;
+    justify-content: space-between; /* Spaziatura tra le card */
+    flex-wrap: wrap; /* Permette di adattare le card su più righe */
+    padding: 0;
+}
+
+.card {
+    position: relative;
+    width: 50%; /* Larghezza delle card su schermi grandi */
+    cursor: pointer;
+}
+
+.card-link {
+    text-decoration: none; /* Rimuove la sottolineatura dal link */
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 300px; /* Altezza fissa per le immagini */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay scuro */
+    transition: opacity 0.3s ease; /* Transizione dell'overlay */
+    opacity: 0;
+}
+
+.card-link:hover .card-overlay {
+    opacity: 1; /* Mostra l'overlay al passaggio del mouse */
+}
+
+.card-content {
+    font-family: 'nunito', sans-serif;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+}
+
+.card-title {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 16px;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Le card occupano tutta la larghezza disponibile su schermi piccoli */
+    }
+
+    .card-image {
+        height: 200px; /* Altezza delle immagini ridotta sui dispositivi mobili */
+    }
+
+    .card-title {
+        font-size: 20px; /* Ridurre la dimensione del font per il titolo */
+    }
+
+    .card-description {
+        font-size: 14px; /* Ridurre la dimensione del font per la descrizione */
+    }
+}
+
+/* contacts section */
+
+.contacts {
+    color: whitesmoke; /* Colore del testo per contrastare con l'immagine */
+    padding: 50px 0; /* Padding per spaziatura interna */
+    margin-top: 0%;
+    align-content: center;
+    max-width: 100%;
+    position: relative;
+    z-index: -1; /* Mette l'immagine di sfondo dietro il contenuto */    
+}
+
+.contacts-content {
+    display: flex;
+    justify-content: space-around; /* Allinea gli elementi attorno al centro */
+    align-items: center; /* Centra verticalmente */
+}
+
+.contacts h2 {
+    font-size: 20px;
+    margin-left: 30%;
+    margin-bottom: 20px; /* Spaziatura inferiore per l'intestazione */
+    text-transform: uppercase;
+    font-family: 'nunito';
+}
+
+.contacts p {
+    line-height: 1.6; /* Altezza della riga per una migliore leggibilità */
+    margin-left: 30%;
+    font-family: 'nunito';
+}
+
+@media screen and (max-width: 1410px) {
+    .contacts-content {
+        flex-direction: column; /* Cambia l'orientamento degli elementi in colonna */
+        text-align: center; /* Centra il testo */
+    }
+
+    .contacts h2 {
+        margin: auto;
+    }
+
+    .contacts p {
+        margin-left: 20%; /* Rimuove il margine destro */
+        margin-right: 20%;
+        font-size: 13px;
+    }
+
+    .contacts-image img {
+        width: 100%; /* Assicura che l'immagine si adatti alla larghezza del contenitore */
+        height: auto; /* Mantiene le proporzioni originali dell'immagine */
+        max-width: 100%; /* Limita la larghezza massima all'intera larghezza dello schermo */
+        display: block; /* Assicura che l'immagine non crei spazi aggiuntivi */
+        margin: 0 auto; /* Centra l'immagine orizzontalmente */
+    }
+    
+}
+
+.anchors {
+    visibility: hidden;
+    position: relative;
+    top: -200px;
+}
+
+/* request section */
+
+.requestContainer {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0%;
+    margin: 50px auto; /* Centra il contenitore verticalmente con uno spazio di 50px */
+    /*  padding: 20px; */
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color:whitesmoke;
+    font-family: 'nunito';
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label { /* sono le scritte sopra agli input */
+    display: block;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    font-family: 'nunito';
+    font-size: 14px;
+    
+}
+
+span {
+    font-size: 12px;
+    text-transform: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    max-width: 40%; /* Larghezza massima del 40% del contenitore */
+    min-width: 250px; /* Larghezza minima per evitare che siano troppo piccoli */
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+    background-color: rgba(40, 40, 40, 0.85);
+    color: whitesmoke; /* Colore del testo */
+    font-family: 'nunito', sans-serif; /* Font del testo */
+    font-size: 14px; /* Dimensione del testo */
+    outline: none; /* Rimuove il contorno predefinito */
+    -webkit-appearance: none; /* Per rimuovere la freccia predefinita su WebKit */
+    -moz-appearance: none; /* Per rimuovere la freccia predefinita su Firefox */
+    appearance: none; /* Per rimuovere la freccia predefinita su altri browser */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Colore del placeholder */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid whitesmoke;
+    background-color: rgba(40, 40, 40, 1);
+}
+
+button[type="submit"] {
+    text-transform: uppercase;
+    font-family: 'nunito';
+    min-width: 100px;
+    padding: 10px;
+    background-color: rgba(95, 95, 95, 0);
+    color: whitesmoke;
+    border: 1px solid whitesmoke; /* Riduci lo spessore del bordo */
+    border-color: whitesmoke;
+    border-radius: 0;
+    cursor: pointer;
+    margin: 0 auto; /* Centra il pulsante orizzontalmente */
+    display: block; /* Assicura che il pulsante sia un blocco centrale */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smooth color change */
+}
+
+button[type="submit"]:hover {
+    color: rgb(0, 0, 0);
+    background-color: whitesmoke;
+}
+
+.footer {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(190,190,190,0) 100%);
+    color: whitesmoke; /* Colore del testo */
+    text-align: left; /* Allinea il testo al centro */
+    position: relative; /* Posiziona il footer in fondo alla pagina */
+    width: 100%; /* Larghezza del footer */
+    bottom: 0; /* Posiziona il footer in basso */
+    font-family: 'Nunito', sans-serif; /* Font del testo */
+    font-size: 14px; /* Dimensione del testo */
+    padding-top: 20px; /* Aggiungi uno spazio sopra il footer */
+    padding-bottom: 20px;
+    z-index: 2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distanzia la scritta copyright e il bottone */
+    align-items: center;
+}
+
+.footer p {
+    margin-left: 30px;
+}
+
+.back-to-top {
+    background: none;
+    font-family: 'nunito', sans-serif;
+    color: whitesmoke;
+    height: 40px;
+    width: auto;
+    font-size: 12px; /* Ridimensiona il font per adattarlo al bottone */
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-right: 30px; /* Allinea il bottone sulla destra */
+    display: none; /* Nascondi il bottone fino a che non serve */
+}
+
+.footer-content .back-to-top {
+    display: block; /* Mostra il bottone su schermi grandi */
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Disposizione verticale su schermi piccoli */
+        align-items: center;
+    }
+
+    .footer p {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .back-to-top {
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+

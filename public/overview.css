@@ -1,0 +1,254 @@
+/* Stile base */
+body {
+    text-align: center;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 12%, rgba(255, 255, 255, 1) 13%, rgba(117, 117, 117, 0.7987570028011204) 16%, rgba(0, 0, 0, 1) 21%, rgba(0, 0, 0, 1) 100%);
+    color: whitesmoke;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden; /* Evita la barra di scorrimento orizzontale */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Aggiunta di ombra al testo */
+}
+
+/* Header Logo */
+
+/* Stili generali per l'header */
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Imposta la larghezza al 100% della viewport */
+    background-color: rgba(0, 0, 0, 0.450); /* Colore di sfondo dell'header */
+    display: flex; /* Utilizza Flexbox per il layout */
+    justify-content: space-between; /* Spazia gli elementi orizzontalmente */
+    align-items: center; /* Allinea gli elementi verticalmente al centro */
+}
+
+/* Stili per il logo */
+.logo a img {
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    max-width: 120px;
+    min-width: 120px;
+}
+
+/* Stili per il menu */
+.menu {
+    position: relative;
+    display: flex; /* Flex per allineare gli elementi */
+    align-items: center; /* Allinea verticalmente gli elementi */
+}
+
+/* Stili per il pulsante del menu a tendina */
+.dropbtn {
+    background-color: transparent;
+    color: whitesmoke;
+    margin-right: 20px;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 32px; /* Aumenta la dimensione dell'icona */
+}
+
+/* Contenuto del menu a tendina */
+.dropdown-content {
+    display: none; /* Nascondi il menu inizialmente */
+    position: absolute; /* Posizionamento assoluto rispetto al genitore */
+    top: 100%; /* Apri il menu subito sotto il pulsante */
+    left: -100%; /* Allinea il menu con il bordo sinistro del pulsante */
+    width: auto; /* Imposta la larghezza del menu uguale al pulsante */
+    background-color: rgba(0, 0, 0, 0.8); /* Assicura un background visibile */
+    z-index: 1; /* Assicura che il menu sia sopra gli altri elementi */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aggiungi ombreggiatura */
+    font-size: 20px;
+}
+
+/* Stile per i link nel menu a tendina */
+.dropdown-content a {
+    color: whitesmoke; /* Colore del testo */
+    padding: 16px 20px; /* Spaziatura interna */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    display: block; /* Rende ogni link un blocco */
+}
+
+/* Mostra il menu a tendina quando si clicca sull'icona */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Sezione di presentazione */
+
+.container {
+    margin-top: 120px;
+}
+
+.section {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    margin: 10px auto; /* Centra le sezioni */
+    width: 90%; /* Larghezza percentuale per adattarsi alla viewport */
+    max-width: 800px; /* Larghezza massima per evitare sezioni troppo larghe */
+    font-size: 16px;
+}
+
+.section h2 {
+    margin-top: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Aggiunta di ombra al testo */
+}
+
+/* Sezione Immagini */
+.section.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px; /* Spazio attorno alle immagini */
+    background: none; /* Rimuove il background dalle immagini */
+    box-shadow: none;
+}
+
+.section.image img {
+    max-width: 100%; /* Dimensione massima per l'immagine più piccola */
+    border-radius: 50%;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.section.image img:first-child {
+    z-index: 1; /* L'immagine più piccola sarà sotto l'altra */
+}
+
+.section.image img:nth-child(2) {
+    max-width: 100%; /* Dimensione massima per l'immagine più grande */
+    position: relative;
+    left: -10px; /* Sovrapposizione orizzontale */
+    top: -10px; /* Sovrapposizione verticale */
+}
+
+.nft {
+    margin-top: 750px;
+}
+
+.description {
+    text-align: center;
+    width: 90%; /* Larghezza percentuale per adattarsi alla viewport */
+    background: none;
+    box-shadow: none; /* Rimozione ombra */
+    padding: 20px;
+    margin: 10px auto; /* Centra la descrizione */
+    border-radius: 8px;
+    max-width: 1200px; /* Larghezza massima per la descrizione */
+}
+
+.description h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Aggiunta di ombra al testo */
+}
+
+/* Media query per schermi piccoli */
+@media (max-width: 768px) {
+    .gallery, .wormhole, .nft {
+        margin-left: 0; /* Disposizione uniforme su schermi piccoli */
+    }
+
+    .section {
+        width: 90%; /* Mantiene la larghezza percentuale */
+        margin: 10px auto; /* Centra le sezioni */
+    }
+
+    .nft {
+        margin-top: 1300px;
+    }
+
+    .section.image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section.image img {
+        max-width: 80%; /* Rimpicciolisce le immagini su schermi più piccoli */
+        margin: 10px 0; /* Aggiunge spazio tra le immagini */
+    }
+
+    .section.image img:first-child {
+        z-index: 1; /* Mantiene l'ordine delle immagini */
+    }
+
+    .section.image img:nth-child(2) {
+        max-width: 90%; /* Adatta le dimensioni dell'immagine più grande */
+        position: relative;
+        left: 0; /* Ripristina la posizione orizzontale */
+        top: 0; /* Ripristina la posizione verticale */
+    }
+}
+
+.footer {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(190,190,190,0) 100%);
+    color: whitesmoke; /* Colore del testo */
+    text-align: left; /* Allinea il testo al centro */
+    position: relative; /* Posiziona il footer in fondo alla pagina */
+    width: 100%; /* Larghezza del footer */
+    bottom: 0; /* Posiziona il footer in basso */
+    font-family: 'Nunito', sans-serif; /* Font del testo */
+    font-size: 14px; /* Dimensione del testo */
+    padding-top: 20px; /* Aggiungi uno spazio sopra il footer */
+    padding-bottom: 20px;
+    z-index: 2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distanzia la scritta copyright e il bottone */
+    align-items: center;
+}
+
+.footer p {
+    margin-left: 30px;
+}
+
+.back-to-top {
+    background: none;
+    font-family: 'nunito', sans-serif;
+    color: whitesmoke;
+    height: 40px;
+    width: auto;
+    font-size: 12px; /* Ridimensiona il font per adattarlo al bottone */
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-right: 30px; /* Allinea il bottone sulla destra */
+    display: none; /* Nascondi il bottone fino a che non serve */
+}
+
+.footer-content .back-to-top {
+    display: block; /* Mostra il bottone su schermi grandi */
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Disposizione verticale su schermi piccoli */
+        align-items: center;
+    }
+
+    .footer p {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .back-to-top {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+

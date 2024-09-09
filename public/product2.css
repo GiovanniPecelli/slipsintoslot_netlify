@@ -1,0 +1,213 @@
+/* Global styles */
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+    overflow-x: hidden; /* Previene lo scroll orizzontale */
+}
+
+/* Background container with fixed background */
+.background-container {
+    position: relative;
+    height: 100vh; /* Rende il contenitore dell'altezza dello schermo */
+    background: url('images/CRYSTALGIRL(1).jpg') no-repeat center center fixed; /* inserisci main image */
+    background-size: cover;
+}
+
+.background-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.748), rgba(0, 0, 0, 0.879));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Posiziona il filtro sopra l'immagine */
+}
+
+/* Header styles */
+.header-content {
+    min-width: 400px;
+    text-align: center;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Posiziona l'header sopra il filtro */
+}
+
+.header-content h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+    margin: 0;
+}
+
+.header-content p {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 12px;
+}
+
+.header-content .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header-content .button:hover {
+    color: black;
+}
+
+/* Main content */
+.main-content {
+    background-color: #f5f5f5;
+    color: whitesmoke;
+}
+
+.image-slider {
+    position: relative; /* Aggiunto per il posizionamento relativo delle frecce */
+    background-color: black;
+}
+
+.image-slider .slides {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.image-slider .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-slider img {
+    width: 100%;
+    display: block;
+    max-width: 50%; /* Imposta la larghezza massima per immagini su schermi più larghi */
+    margin: 0 auto; /* Centra l'immagine all'interno del contenitore */
+}
+
+.prev, .next {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    width: 150px; /* Larghezza fissa per il bottone */
+    height: 350px; /* Altezza fissa per il bottone */
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: whitesmoke;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 3; /* Assicura che le frecce siano sopra le immagini */
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Description styles */
+.description {
+    font-weight: 300;
+    color: whitesmoke;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 27%, rgba(83,83,83,1) 63%, rgb(175, 175, 175) 100%);
+    padding: 100px 30px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.description h2 {
+    text-transform: uppercase;
+    font-size: large;
+}
+
+.description p {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 640px) {
+    .header-content {
+        min-width: 370px;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content .button {
+        font-size: 14px;
+    }
+
+    .image-slider img {
+        max-width: 100%; /* Rende le immagini a larghezza intera su schermi piccoli */
+    }
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.256);
+}
+
+.footer-content {
+    margin-top: 30px;
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between; /* Distanzia la scritta copyright e il bottone */
+    align-items: center;
+}
+
+.footer p {
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+.back-to-top {
+    background: none;
+    font-family: 'nunito', sans-serif;
+    color: whitesmoke;
+    font-weight: 700;
+    height: 40px;
+    width: auto;
+    font-size: 12px; /* Ridimensiona il font per adattarlo al bottone */
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-right: 30px; /* Allinea il bottone sulla destra */
+    display: none; /* Nascondi il bottone fino a che non serve */
+}
+
+.footer-content .back-to-top {
+    display: block; /* Mostra il bottone su schermi grandi */
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Disposizione verticale su schermi piccoli */
+        align-items: center;
+    }
+
+    .footer p {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .back-to-top {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,203 @@
+<!-- "!"> invio > base model -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slipsintoslot</title>
+    <!-- link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html"> <!-- Modifica qui per puntare alla home -->
+                    <img src="images/photo_2024-04-24_15-53-58-removebg-preview.png" alt="logo">
+                </a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a class="button" href="overview.html">Overview</a></li>
+                    <li><a class="button" href="#Request">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>slips into slot</h1>
+            <h3>search for your inspiration</h3>
+            <a class="hero-cta" href="#About">Discover My Essence</a>
+        </div>
+    </section>
+    
+
+    <!-- cover section -->
+    <section class="cover">
+        <div class="cover__carrier"></div>
+        <div class="cover__filter"></div>
+        <div class="cover__content">
+            <div class="cover__text">
+                <h2>gallery</h2>
+                <p>Discover My Works</p>
+                <a class="cover__button" href="gallery.html">Here</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- intro section -->
+    
+    <section class="intro-section">
+        <div class="container">
+            <h2 class="intro-title">Exploring Beyond</h2>
+            <p class="intro-paragraph">Explore Wormhole and NFT for an exclusive dive into in-depth topics. 
+                <br> Join our private newsletter (coming soon) and engage with everything that inspires me and the community.
+            </p>
+        </div>
+    </section>
+
+    <!-- image-cards section -->
+    
+    <section class="image-cards">
+        <div class="card">
+            <a href="coming_soon.html" class="card-link">
+                <div class="card-image" style="background-image: url('images/card1.JPG');">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">Wormhole</h2>
+                        <p class="card-description">Explore the Wormhole</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="coming_soon.html" class="card-link">
+                <div class="card-image" style="background-image: url('images/image2.png');">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h2 class="card-title">NFT</h2>
+                        <p class="card-description">Discover NFTs</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    
+    <section class="contacts">
+        <a class="anchors" id="About"></a> <!-- ancora per href #about, button -->
+        <div class="container contacts-content">
+            <div class="contacts-about">
+                <h2>essence</h2>
+                <p> In my art 'Slips into Slot', I represent an exploration into alternative perspectives. 
+                    <br> <br>
+                    The floating bubbles in the 
+                    air are weighed down by black ink, viscous like oil, which metaphorically symbolizes self-imposed limits that 
+                    constrain our emotional experiences: slipping into the slot, entering it, conquering a new viewpoint; these are 
+                    all invitations to urge the observer to surpass these limits, cleanse themselves of the sticky oil, and float like 
+                    bubbles until they burst with emotions. Limitless sensitivity prompts reflection on possible new perspectives 
+                    that make us empathetic and aware. 
+                    <br> <br>
+                    This process aims to challenge the boundaries of human understanding 
+                    and explore the deeper nuances of our existence.
+                </p>
+            </div>
+            <div class="contacts-image">
+                <img src="images/fumo.jpeg" alt="fumo">
+            </div>
+        </div>
+    </section>
+
+    <!-- section request -->
+
+    <section class="request">
+        <a class="anchor" id="Request"></a>
+        <div class="requestContainer">
+            <h2>Message Me</h2>
+            <form id="contactForm" action="https://slipsintoslot.vercel.app/submit-form" method="POST">
+                <!-- Nome -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <!-- Oggetto della richiesta -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a Subject</option>
+                        <option value="general">Physical Works Info</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="Further">Further Requests: Specify Details in Message</option>
+                    </select>
+                </div>
+    
+                <!-- Informazioni aggiuntive, obbligatorie per l'invio del contatto -->
+                <div class="form-group">
+                    <label for="additional">Message</label>
+                    <textarea id="additional" name="additional" rows="4" placeholder="Please specify the reason for your contact" required></textarea>
+                </div>
+    
+                <!-- Pulsante di invio -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <br>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>slipsintoslot copyright &copy; 2024</p>
+            <button class="back-to-top" onclick="scrollToTop()">BACK TO TOP</button>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const dropdownContent = document.querySelector('.dropdown-content');
+    
+            menuToggle.addEventListener('click', function () {
+                dropdownContent.classList.toggle('show');
+            });
+    
+            document.addEventListener('click', function (event) {
+                if (!menuToggle.contains(event.target) && !dropdownContent.contains(event.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="request.js"></script>
+
+    <script type="text/javascript" src="script.js"></script> <!-- va sempre prima della chiusura del body -->
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* Buona usanza definire dei parametri di base tra cui quelli nel *, oltre che nel body */
+* {
+    box-sizing: border-box; /* Altezza degli elementi contiene i padding e valori definiti */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    /*font-family: 'nunito', sans-serif;*/
+    font-size: 100%;
+}
+
+body, html {
+    overflow-x: hidden; /* importante per impedire la creazione di spazi esterni allo schermo quando l'immagine viene tagliata, evitando lo scorrimento*/
+}
+
+.comingsoon {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altezza al 100% della viewport */
+    background-color: black; /* Colore di sfondo nero */
+}
+
+.comingsoon .image {
+    max-width: 70%; /* Larghezza massima dell'immagine */
+    margin-bottom: 100px; /* Spazio sotto l'immagine */
+}
+
+.comingsoon .image img {
+    width: 100%;
+    height: auto; /* Altezza automatica per mantenere le proporzioni */
+    display: block; /* Imposta l'immagine come blocco */
+    margin: 0 auto; /* Centra l'immagine orizzontalmente */
+}
+
+.comingsoon .text {
+    text-align: center; /* Allinea il testo al centro */
+    color: whitesmoke; /* Colore del testo bianco */
+}
+
+.comingsoon h1 {
+    text-transform: uppercase;
+    font-size: 16px; /* Dimensione del titolo */
+    font-weight: 500px;
+    font-family: 'nunito'; /* Font del titolo */
+    margin-bottom: 20px; /* Spazio sotto il titolo */
+}
+
+.comingsoon .home {
+    font-size: 16px; /* Dimensione del bottone */
+    font-family: 'nunito';
+    padding: 10px 20px; /* Padding del bottone */
+    background-color: rgba(95, 95, 95, 0);
+    color: whitesmoke;
+    border: 1px solid whitesmoke; /* Riduci lo spessore del bordo */
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s; /* Transizione colore di sfondo al passaggio del mouse */
+}
+
+.comingsoon .home:hover {
+    background-color: rgb(255, 255, 255); /* Colore di sfondo del bottone al passaggio del mouse */
+    color: black;
+}
+
+.comingsoon .explore {
+    font-size: 16px; /* Dimensione del bottone */
+    font-family: 'nunito';
+    padding: 10px 20px; /* Padding del bottone */
+    background-color: rgb(227, 227, 227); /* Colore di sfondo del bottone */
+    color: rgb(0, 0, 0); /* Colore del testo del bottone */
+    border: 1px solid whitesmoke; /* Riduci lo spessore del bordo */
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    font-weight: bold;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s; /* Transizione colore di sfondo al passaggio del mouse */
+}
+
+.comingsoon .explore:hover {
+    background-color: rgb(0, 0, 0); /* Colore di sfondo del bottone al passaggio del mouse */
+    color: whitesmoke;
+}
+
+/* Stile per il paragrafo */
+.comingsoon .info {
+    font-family: 'nunito';
+    color: whitesmoke;
+    font-size: 14px; /* Dimensione del testo del paragrafo */
+    line-height: 1.6; /* Altezza della linea per migliorare la leggibilità */
+    margin-top: 20px; /* Spazio sopra il paragrafo */
+    margin-bottom: 20px; /* Spazio sotto il paragrafo */
+    padding: 0 40px; /* Padding orizzontale per il paragrafo */
+    max-width: 600px; /* Larghezza massima per il paragrafo */
+    margin-left: auto; /* Allinea il paragrafo al centro */
+    margin-right: auto; /* Allinea il paragrafo al centro */
+}
+
+@media screen and (max-width: 640px) {
+    .comingsoon {
+        flex-direction: column; /* Cambia il layout a colonna */
+        align-items: center; /* Centra verticalmente */
+        text-align: center; /* Allinea il testo al centro */
+    }
+
+    .comingsoon .image {
+        overflow: hidden; /* Taglia l'immagine che esce dallo schermo */
+        width: 100%;
+        margin-top: -20%; /* Sposta l'immagine verso l'alto del 40% */
+        min-width: none; /* Larghezza minima dell'immagine */
+        position: relative;
+    }
+
+    .comingsoon .image img {
+        width: 100%;
+        height: auto; /* Mantiene le proporzioni dell'immagine */
+        display: block; /* Imposta l'immagine come blocco */
+        margin: 0 auto; /* Centra l'immagine orizzontalmente */
+    }
+
+    .comingsoon .text {
+        margin-top: -80px; /* Riduce lo spazio sopra il testo */
+        margin-bottom: 60px; /* Aggiunge spazio sotto il testo per separarlo dal bottone */
+    }
+
+    .comingsoon h1 {
+        font-size: 16px; /* Dimensione del titolo */
+        margin-bottom: 10px; /* Spazio sotto il titolo */
+    }
+
+    .comingsoon .home {
+        font-size: 14px; /* Dimensione del bottone */
+        padding: 8px 16px; /* Padding del bottone */
+        margin-top: 10px; /* Aggiunge uno spazio sopra il bottone per separarlo dal testo */
+    }
+
+    .comingsoon .explore {
+        font-size: 14px; /* Dimensione del bottone */
+        padding: 8px 16px; /* Padding del bottone */
+        margin-top: 10px; /* Aggiunge uno spazio sopra il bottone per separarlo dal testo */
+    }
+}
+

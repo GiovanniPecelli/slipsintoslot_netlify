@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overview</title>
+    <link rel="stylesheet" href="overview.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/photo_2024-04-24_15-53-58-removebg-preview.png" alt="logo">
+                </a>
+            </div>
+            <nav class="menu">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">☰</button> <!-- Icona a hamburger -->
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="coming_soon.html">Wormhole</a>
+                        <a href="coming_soon.html">NFT</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="section gallery">
+            <h2>Gallery</h2>
+            <p>The Gallery of Slips into Slots is the Beating Heart of the Entire Project, where you will find every piece of my physical artwork. 
+                It is a celebration of artistic expression and personal discovery. Explore the forms and interpret them in your own way. 
+                Let your emotions emerge and allow yourself to be carried away by your own essence.
+            </p>
+        </div>
+
+        <div class="section image">
+            <img src="images/heart1.jpeg" alt="">
+        </div>
+        
+        <div class="section wormhole">
+            <h2>Wormhole</h2>
+            <p>"Wormhole" is one of our future projects currently in development and will serve as the heart of our community.
+                <br> <br>
+                This exclusive hub will offer access to a wide range of valuable content, including articles, poetry, tutorials, podcasts, recommended books, and much more. 
+                These highly personalized resources are designed to support personal growth and break free from limiting perspectives.
+                <br> <br>
+                Imagine "Wormhole" as a cosmic node where knowledge and experiences intertwine, much like the entanglement of particles in the quantum realm. 
+                Just as entangled particles influence each other across vast distances, this hub will weave together diverse insights and discussions, 
+                fostering deep connections among members and emotional communication between people.
+                <br> <br>
+                Through an annual subscription model, users will have access to materials ranging from cultural exploration to economic insights, 
+                with the goal of enriching your understanding and personal development. 
+                <br> <br>
+                I am working to create a safe and stimulating space where people can connect, learn, and grow together, 
+                navigating through a rich tapestry of shared knowledge and experiences.
+            </p>
+        </div>
+        
+        <div class="section nft">
+            <h2>NFT</h2>
+            <p>NFT is a future project still in development. Each NFT will be a unique and limited digital artwork, 
+                offering not only an exclusive creation but also special benefits for its holders.
+                <br> <br> 
+                With each NFT, you'll gain access to a restricted community and exclusive content, such as webinars and events. 
+                This project aims to merge digital art with a unique experience and exclusive benefits for collectors. 
+                <br> <br>
+                Stay tuned to find out when the NFTs will be available.
+            </p>
+        </div>
+
+        <div class="section image">
+            <img src="images/nft1.jpeg" alt="">
+            <img src="images/nft2.jpeg" alt="">
+        </div>
+        
+        <div class="description">
+            <h2>Current Endeavors and Future Visions</h2>
+            <p>This section provides a detailed look at the current and future projects of Slips into Slots. 
+                Stay updated with the latest news and discover the work I'm developing. 
+                Here, you will find information on ongoing projects like the Gallery and the upcoming developments of Wormhole and NFT.
+                <br> <br> 
+                With over four years of experience in the art world, a continuous search for my individuality and emotional depth, 
+                and a desire to connect with inspiring people, I am excited to share my journey and ideas, aiming to create a highly positive intersection.
+                <br> <br>
+                For questions and information, please fill out the contact form, and I will respond as soon as possible.
+                <br> <br> <br>
+                Your curiosity and feedback are truly important to me.
+            </p>
+        </div>
+    </div>
+
+    <!-- footer section -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>slipsintoslot copyright &copy; 2024</p>
+            <button class="back-to-top" onclick="scrollToTop()">BACK TO TOP</button>
+        </div>
+    </footer>
+
+    <!-- JavaScript per il menu a tendina -->
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.classList.toggle('show'); // Mostra o nasconde il menu
+        }
+    
+        // Chiude il menu se si clicca al di fuori
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdownContent = document.querySelector('.dropdown-content');
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+            }
+        };
+    </script>
+
+    <script type="text/javascript" src="script.js"></script> <!-- va sempre prima della chiusura del body -->
+
+</body>
+</html>

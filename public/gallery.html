@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="gallery.css"> <!-- non serve l'inclusione in public dato che utilizzo express che è automatico -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header che scorre con lo schermo -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html"> <!-- Modifica qui per puntare alla home -->
+                    <img src="images/photo_2024-04-24_15-53-58-removebg-preview.png" alt="logo">
+                </a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a class="button" href="overview.html">overview</a></li>
+                    <li><a class="button" href="index.html#Request">contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Nuova Sezione con Immagine e Descrizione -->
+    <section class="intro-section">
+        <div class="container intro-content">
+            <div class="intro-description">
+                <h2>Into the Unknown</h2>
+                <p>What is the fine line that separates what we individually see from what objectively is? 
+                    <br> <br>
+                    Many times we ask ourselves: Who are we really? In most cases, we don’t know the answer.
+                    Are we truly ourselves, or are we teetering between freedom and constraint?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Galleria -->
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Opera 1 -->
+                <div class="gallery-item">
+                    <a href="product1.html">
+                        <img src="images/OIL(0).jpg" alt="Product 1">
+                        <div class="description">
+                            <h3>coperta di petrolio</h3>
+                            <p>Emotions burn piled up in the viscous actions</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Opera 2 -->
+                <div class="gallery-item">
+                    <a href="product2.html">
+                        <img src="images/CRYSTALGIRL(1).jpg" alt="Product 2">
+                        <div class="description">
+                            <h3>crystal soul</h3>
+                            <p>Memories stored in the deeply mind</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Opera 3 -->
+                <!-- <div class="gallery-item">
+                    <a href="product.html">
+                        <img src="images/product3.jpg" alt="Product 3">
+                        <div class="description">
+                            <h3>Opera 3</h3>
+                            <p>Descrizione breve dell'opera 3.</p>
+                        </div>
+                    </a>
+                </div> -->
+                <!-- Opera 4 -->
+                <!-- <div class="gallery-item">
+                    <a href="product.html">
+                        <img src="images/product4.jpg" alt="Product 4">
+                        <div class="description">
+                            <h3>Opera 4</h3>
+                            <p>Descrizione breve dell'opera 4.</p>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Descrizioni Aggiuntive -->
+    <section class="additional-info">
+        <div class="container">
+            <h2>Crossing Boundaries</h2>
+            <p>My work invites you to step into this tension, challenge your perspective, and discover the hidden depths of your emotions. 
+                Each bubble and fracture is not merely a visual element but a representation of the ideas and sensations that often float in our minds, 
+                sometimes in conflict, sometimes in balance. 
+                <br> <br>
+                This visual journey is an invitation to confront your doubts, embrace uncertainty, and allow your beliefs to evolve. 
+                The bubbles floating in the air symbolize our ideas, free yet fragile, ready to burst into new understandings. 
+                In this dance of forms and shadows, the black ink represents the limits we impose on ourselves, those boundaries we draw, 
+                trapping ourselves in a web of self-imposed pressures. 
+                <br> <br>
+                Every stroke, every bubble, and every crack is a call to recognize these self-imposed constraints and to break free from them, 
+                allowing our perceptions to expand and transform.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>slipsintoslot copyright &copy; 2024</p>
+            <button class="back-to-top" onclick="scrollToTop()">BACK TO TOP</button>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script> <!-- inclusione nella sottocartella js -->
+
+</body>
+</html>
