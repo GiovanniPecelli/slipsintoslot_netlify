@@ -1,29 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Assicurati che il modulo esista prima di aggiungere l'event listener
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Impedisce il comportamento predefinito del modulo
+            event.preventDefault();
 
-            // Creazione delle costanti ottenute dai moduli del submit
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
-                message: document.getElementById('additional').value // Assicurati che l'ID sia corretto
+                message: document.getElementById('additional').value
             };
 
-            console.log("Dati del form:", formData);  // Aggiungi questo per verificare se i dati del form sono raccolti correttamente
+            console.log("Dati del form:", formData);
 
-            // Invia una richiesta POST al server con i dati del modulo
-            fetch('https://slipsintoslot.netlify.app/submit-form', {
+            fetch('/.netlify/functions/submit-form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             })
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Errore nella risposta del server');
+                }
+            })
+            
             .then(data => {
                 if (data.success) {
                     alert('Your request has been submitted. You will be personally contacted via email as soon as possible.');
