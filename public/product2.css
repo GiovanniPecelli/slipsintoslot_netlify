@@ -16,6 +16,14 @@ body {
     height: 100vh; /* Rende il contenitore dell'altezza dello schermo */
     background: url('images/CRYSTALGIRL(1).jpg') no-repeat center center fixed; /* inserisci main image */
     background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Disattiva background-attachment: fixed sui dispositivi mobili */
+@media (max-width: 768px) {
+    .background-container {
+        background-attachment: scroll;
+    }
 }
 
 .background-overlay {

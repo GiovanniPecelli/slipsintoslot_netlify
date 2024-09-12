@@ -55,12 +55,19 @@ h3 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url('images/hero1.jpeg'); /* Sostituisci con il tuo URL dell'immagine */
     background-size: cover;
     background-position: center;
     z-index: -2; /* Mette l'immagine di sfondo dietro il contenuto */
-    background-attachment: fixed; /* Fissa l'immagine di sfondo durante lo scroll */
+    background-attachment: fixed;
+}
+
+/* Disattiva background-attachment: fixed sui dispositivi mobili */
+@media (max-width: 768px) {
+    .hero-background {
+        background-attachment: scroll;
+    }
 }
 
 .hero-overlay {
