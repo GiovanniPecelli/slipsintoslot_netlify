@@ -114,10 +114,13 @@ body {
 }
 
 .section.image img {
-    max-width: 100%; /* Dimensione massima per l'immagine più piccola */
+    width: 100%; /* Permette all'immagine di ridimensionarsi in larghezza */
+    max-width: 300px; /* Limita la larghezza massima dell'immagine */
+    height: auto; /* Mantiene le proporzioni */
     border-radius: 50%;
     margin: 0 20px;
     transition: all 0.3s ease;
+    object-fit: cover; /* Assicura che l'immagine non venga distorta */
 }
 
 .section.image img:first-child {
@@ -165,7 +168,7 @@ body {
     }
 
     .nft {
-        margin-top: 1300px;
+        margin-top: 1300px; /* spazio per far vedere lo sfondo */
     }
 
     .section.image {
@@ -176,6 +179,7 @@ body {
     .section.image img {
         max-width: 80%; /* Rimpicciolisce le immagini su schermi più piccoli */
         margin: 10px 0; /* Aggiunge spazio tra le immagini */
+        object-fit: cover; /* Mantiene proporzioni corrette senza distorsione */
     }
 
     .section.image img:first-child {
@@ -187,6 +191,7 @@ body {
         position: relative;
         left: 0; /* Ripristina la posizione orizzontale */
         top: 0; /* Ripristina la posizione verticale */
+        object-fit: cover; /* Mantiene proporzioni corrette senza distorsione */
     }
 }
 

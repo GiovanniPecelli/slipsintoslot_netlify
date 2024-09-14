@@ -81,49 +81,48 @@ body {
 }
 
 .image-slider {
-    position: relative; /* Aggiunto per il posizionamento relativo delle frecce */
+    position: relative;
+    overflow: hidden; /* Nasconde tutto ciò che esce dal contenitore */
     background-color: black;
 }
 
 .image-slider .slides {
     display: flex;
-    overflow: hidden;
-    max-width: 100%;
-    margin: 0 auto;
+    transition: transform 0.5s ease-in-out; /* Transizione fluida */
 }
 
 .image-slider .slide {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
+    min-width: 100%; /* Ogni slide occupa tutta la larghezza del contenitore */
+    display: flex;
+    justify-content: center; /* Centra l'immagine orizzontalmente */
+    align-items: center; /* Centra l'immagine verticalmente */
 }
 
 .image-slider img {
-    width: 100%;
-    display: block;
-    max-width: 50%; /* Imposta la larghezza massima per immagini su schermi più larghi */
-    margin: 0 auto; /* Centra l'immagine all'interno del contenitore */
+    width: 100%; /* Immagine occupa tutta la larghezza del contenitore slide */
+    height: auto; /* Mantiene le proporzioni */
 }
 
 .prev, .next {
     position: absolute;
-    font-size: 40px;
+    font-size: 30px;
     top: 50%;
-    width: 150px; /* Larghezza fissa per il bottone */
-    height: 350px; /* Altezza fissa per il bottone */
-    border: none;
+    width: 50px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0);
     color: whitesmoke;
+    border: none;
     cursor: pointer;
     transform: translateY(-50%);
-    z-index: 3; /* Assicura che le frecce siano sopra le immagini */
+    z-index: 3;
 }
 
 .prev {
-    left: 20px;
+    left: 10px;
 }
 
 .next {
-    right: 20px;
+    right: 10px;
 }
 
 /* Description styles */
