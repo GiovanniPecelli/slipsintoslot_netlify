@@ -70,10 +70,6 @@ body {
     cursor: pointer;
 }
 
-.header-content .button:hover {
-    color: black;
-}
-
 /* Main content */
 .main-content {
     background-color: #f5f5f5;

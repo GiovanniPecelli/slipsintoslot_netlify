@@ -555,6 +555,10 @@ button[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
+    .footer {
+        padding-bottom: 60px;
+    }
+    
     .footer-content {
         flex-direction: column; /* Disposizione verticale su schermi piccoli */
         align-items: center;

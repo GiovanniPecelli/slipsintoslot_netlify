@@ -5,7 +5,6 @@ body {
     border: 0;
     margin: 0;
     background: rgb(0, 0, 0);
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 12%, rgba(255, 255, 255, 1) 13%, rgba(117, 117, 117, 0.7987570028011204) 16%, rgba(0, 0, 0, 1) 21%, rgba(0, 0, 0, 1) 100%);
     color: whitesmoke;
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden; /* Evita la barra di scorrimento orizzontale */
@@ -103,6 +102,14 @@ body {
 }
 
 /* Sezione Immagini */
+.blackhole img {
+    width: 100%; /* L'immagine si ridimensiona alla larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni originali dell'immagine */
+    max-width: 100%; /* Garantisce che l'immagine non superi la sua dimensione originale */
+    display: block; /* Elimina eventuali spazi vuoti sotto l'immagine */
+    margin: 0 auto; /* Centra l'immagine orizzontalmente */
+}
+
 .section.image {
     display: flex;
     justify-content: center;
@@ -135,7 +142,8 @@ body {
 }
 
 .nft {
-    margin-top: 750px;
+    margin-top: 50px;
+    
 }
 
 .description {
@@ -168,7 +176,7 @@ body {
     }
 
     .nft {
-        margin-top: 1300px; /* spazio per far vedere lo sfondo */
+        margin-top: 50px; /* spazio per far vedere lo sfondo */
     }
 
     .section.image {
@@ -239,6 +247,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .footer {
+        padding-bottom: 60px;
+    }
+
     .footer-content {
         flex-direction: column; /* Disposizione verticale su schermi piccoli */
         align-items: center;
